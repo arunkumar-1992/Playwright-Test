@@ -1,18 +1,18 @@
 
 import { Browser, BrowserContext, chromium, Page,test, expect } from "@playwright/test";
 let page: Page;
-let browser: Browser;
+//let browser: Browser;
 let context:BrowserContext;
 
-test('navigate to Testkube Portal', async () => {
+test('navigate to Testkube Portal', async ({page}) => {
 
-  browser = await chromium.launch({ headless: false, slowMo: 50, channel: "chrome" });//
+  //browser = await chromium.launch({ headless: false, slowMo: 50, channel: "chrome" });//
     
-  context = await browser.newContext();
-  await context.clearCookies();
+  //context = await browser.newContext();
+  //await context.clearCookies();
   //context = await browser.newContext({
   //recordHar: { path: 'example.har', urlFilter: '**/oce/**' }});
-  page = await context.newPage();
+  //page = await context.newPage();
   await page.goto('https://testkube.io/');
   await page.getByTestId('uc-accept-all-button').click();
 
