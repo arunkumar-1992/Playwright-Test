@@ -6,7 +6,7 @@ let context:BrowserContext;
 
 test('navigate to Testkube Portal', async () => {
 
-  browser = await chromium.launch({ headless: false, slowMo: 50, channel: "chrome" });//
+  browser = await chromium.launch({ headless: false, slowMo: 50 });//
     
   context = await browser.newContext();
   await context.clearCookies();
