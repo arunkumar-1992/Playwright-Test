@@ -17,7 +17,7 @@ test('navigate to Testkube Portal', async ({page}) => {
   await page.getByTestId('uc-accept-all-button').click();
 
   // Expect a title "to contain" a substring.
-  console.log("testing testkube with Git Commit")
+  console.log("testing testkube only with  Git Commit input ")
   await expect(page).toHaveTitle("Kubernetes-Native Testing Framework | Testkube");
   await page.getByRole('link', { name: 'See all Integrations' }).click();
   await page.getByRole('heading', { name: 'Playwright' }).click();
